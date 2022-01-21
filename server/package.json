@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"express-graphql": "^0.12.0",
-		"graphql": "^16.2.0"
+		"graphql": "^16.2.0",
+		"lodash": "^4.17.21"
 	}
 }

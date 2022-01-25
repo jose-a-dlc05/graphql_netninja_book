@@ -81,6 +81,18 @@ const RootQuery = new GraphQLObjectType({
 				return _.find(authors, { id: args.id });
 			},
 		},
+		books: {
+			type: new GraphQLList(BookType),
+			resolve(parent, args) {
+				return books;
+			},
+		},
+		authors: {
+			type: new GraphQLList(AuthorType),
+			resolve(parent, args) {
+				return authors;
+			},
+		},
 	},
 });
 
@@ -93,3 +105,5 @@ module.exports = new GraphQLSchema({
 });
 
 // Explain why one would use GRAPHQLID vs GRAPHQLString for the identifier variable
+
+// Inside of root query create fields to return all books and all authors
